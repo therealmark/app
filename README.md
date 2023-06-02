@@ -4,7 +4,9 @@ This project demonstrates how to use the MongoDB Sync driver to write to an Atla
 # Prerequisites 
 1. A MongoDB Atlas account
 2. Load the sample data
+
 ![sample data](1.png)
+
 3. Create a search index with the following mappings
 ```json
 {
