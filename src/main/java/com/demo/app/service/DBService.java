@@ -2,11 +2,7 @@ package com.demo.app.service;
 
 import com.demo.app.client.MyMongoClient;
 import com.demo.app.model.Customer;
-import com.mongodb.client.model.FindOneAndReplaceOptions;
-import com.mongodb.client.model.InsertOneOptions;
-import com.mongodb.client.model.ReturnDocument;
 import com.mongodb.client.model.UpdateOptions;
-import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -21,7 +17,7 @@ public class DBService {
         this.mongoClient = mongoClient;
     }
 
-    public ResponseEntity<String> save(Customer customer) {
+    public ResponseEntity<String> insertCustomer(Customer customer) {
         return ResponseEntity.ok().body(mongoClient
                 .getCustomerCollection()
                 .insertOne(customer)

@@ -19,7 +19,7 @@ public class DBController {
     }
 
     @PostMapping("/customers")
-    public ResponseEntity<String> save(@RequestBody Customer customer) {
-        return dbService.save(customer);
+    public ResponseEntity<String> insertCustomer(@RequestBody Customer customer) {
+        return dbService.insertCustomer(customer);
     }
 }
